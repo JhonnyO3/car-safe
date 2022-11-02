@@ -1,8 +1,8 @@
 import React from "react";
 import banner from "../img/banner1copy.jpg"
 import { DivBanner, DivMain } from "../style/styled";
-import About from "./About";
 import Cards from "./Cards";
+import Proposta from "./Proposta";
 import Solution from "./Solution";
 
 export default function Home() {
@@ -20,6 +20,7 @@ export default function Home() {
         </div>
         </DivBanner>
         <Solution/>
+        <Proposta/>
         <Cards/>
         </DivMain>
         </div>

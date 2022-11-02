@@ -1,6 +1,115 @@
-import React from "react";
 import styled from "styled-components";
 
+
+
+export const DivProposta = styled.div`
+
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+width: 100%;
+background-color: #F0F0F0;
+position: relative;
+top: 100vh;
+padding-top: 150px;
+font-size: 20px;
+padding-bottom: 150px;
+display: flex;
+
+margin-bottom: 90px;
+img{
+  width: 700px;
+  padding-right: 50px;
+  padding-top: 10px;
+}
+p{
+  margin-top: 20px;
+  font-size: 30px;
+  width: 85%;
+}
+.text{
+  margin-left: 40px;
+  margin-top: 90px;
+}
+
+
+
+`
+
+export const DivBody = styled.body`
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
+export const DivRegistro = styled.div`
+*{
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.input-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+
+}
+.input-box input { 
+  margin: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #00001c;
+}
+.input-box input:hover{
+  background-color: #eeeeee75;
+}
+
+
+.container {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
+}
+.form-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: #c6c6c6;
+}
+.form-image img {
+  width: 41rem;
+}
+.form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 4rem;
+
+}
+.title {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+`
 
 export const DivMain = styled.div`
 position: absolute;
