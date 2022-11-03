@@ -1,6 +1,6 @@
 import React from "react";
-import registro from "../img/registro.svg"
-import { DivBody, DivRegistro } from "../style/styled";
+import registro from "../../img/registro.svg"
+import { DivBody, DivRegistro } from "../../style/styled";
 
 
 export default function Cadastro() {

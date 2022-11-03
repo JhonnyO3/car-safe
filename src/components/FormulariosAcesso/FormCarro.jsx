@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { DivBody, DivRegistro } from "../style/styled";
-import registro from "../img/eletrico2.svg"
+import { DivBody, DivRegistro } from "../../style/styled";
+import registro from "../../img/eletrico2.svg"
 
 
 export default function FormCarro() {

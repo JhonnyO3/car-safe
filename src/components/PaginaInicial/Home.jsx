@@ -1,6 +1,6 @@
 import React from "react";
-import banner from "../img/banner1copy.jpg"
-import { DivBanner, DivMain } from "../style/styled";
+import banner from "../../img/banner1copy.jpg"
+import { DivBanner, DivMain } from "../../style/styled";
 import Cards from "./Cards";
 import Proposta from "./Proposta";
 import Solution from "./Solution";

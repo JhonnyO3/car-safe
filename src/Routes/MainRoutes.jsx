@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Cadastro from "../components/Cadastro";
-import FormCarro from "../components/FormCarro";
-import Home from "../components/Home";
-import Login from "../components/Login";
+import Cadastro from "../components/FormulariosAcesso/Cadastro";
+import FormCarro from "../components/FormulariosAcesso/FormCarro";
+import Login from "../components/FormulariosAcesso/Login";
+import Home from "../components/PaginaInicial/Home";
 
 export default function MainRoutes() {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
-import { DivProposta } from "../style/styled";
-import maserati from "../img/maserati.png"
-import ia from "../img/ia.png"
+import { DivProposta } from "../../style/styled";
+import maserati from "../../img/maserati.png"
+import ia from "../../img/ia.png"
 
 export default function Proposta() {
     return (

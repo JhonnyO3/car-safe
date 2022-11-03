@@ -1,5 +1,5 @@
 import React from "react";
-import { DivAbout } from "../style/styled";
+import { DivAbout } from "../../style/styled";
 
 
 

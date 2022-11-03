@@ -1,10 +1,10 @@
 import React from "react";
-import machinel from "../img/machinel.jpg"
-import seguranca from "../img/seguranca.webp"
-import banner3 from "../img/eficiencas.jpg"
+import machinel from "../../img/machinel.jpg"
+import seguranca from "../../img/seguranca.webp"
+import banner3 from "../../img/eficiencas.jpg"
 
 
-import { DivCards } from "../style/styled";
+import { DivCards } from "../../style/styled";
 
 
 export default function Cards() {

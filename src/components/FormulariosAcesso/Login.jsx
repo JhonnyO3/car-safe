@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { DivBody, DivRegistro } from "../style/styled";
-import eletrico from "../img/eletrico2.svg"
+import { DivBody, DivRegistro } from "../../style/styled";
+import eletrico from "../../img/eletrico2.svg"
 
 
 export default function Login() {
