@@ -18,7 +18,7 @@ export default function Header() {
                 <li><Link to="/" >Sobre</Link></li>
                 <li><Link to="/" >Contato</Link></li>
                 <li><Link to="/login" ><button>Login</button></Link></li>
-                <li><Link to="/cadastro"><button>Cadastro</button></Link></li>
+                <li><Link to="/veiculo/cadastro-veiculo"><button>Cadastro</button></Link></li>
             </ul>
         </DivHeader>
     )

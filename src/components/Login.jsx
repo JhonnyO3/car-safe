@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { DivBody, DivRegistro } from "../style/styled";
 import eletrico from "../img/eletrico2.svg"
 
 
 export default function Login() {
+
+    const [usuario, setUsuario] = useState({
+        login : "",
+        senha: ""
+    })
+
+    const handleChange = e => {
+        setUsuario({...usuario, [e.target.name]: e.target.value})
+    }
+
+    const logar = async (e) => {
+        e.preventDefault()
+        const requestOptions = {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(usuario)
+        }
+
+        const response = await fetch(
+
+        )
+    }
+
+
+
+
+
     return (
         <DivBody>
             <DivRegistro>

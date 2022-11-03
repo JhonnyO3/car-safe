@@ -91,14 +91,14 @@ export default function Cadastro() {
                                         <option value="o+">O+</option>
                                         <option value="o-">O-</option>
                                     </select>
-                                <div className="input-box">
-                                    <label>raça</label>
-                                    <select  name="raca" id="raca" required>
-                                        <option  value="Branca">Branca</option>
-                                        <option value="Parda">Parda</option>
-                                        <option value="Negra">Negra</option>
-                                    </select>
-                                </div>
+                                    <div className="input-box">
+                                        <label>raça</label>
+                                        <select name="raca" id="raca" required>
+                                            <option value="Branca">Branca</option>
+                                            <option value="Parda">Parda</option>
+                                            <option value="Negra">Negra</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div className="input-box">
                                     <label>Nome para contato</label>
