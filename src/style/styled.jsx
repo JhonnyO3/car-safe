@@ -1,6 +1,153 @@
 import styled from "styled-components";
 
+export const DivInfoPessoal = styled.div`
+display: flex;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+.subMenu{
+  background-color: #dedede;
+  box-shadow: 2px 6px 6px 3px #9b9b9b;
+  padding: 100px;
+  display: flex;
+  height: 68.5vh;
+  width: 10%;
+}
+ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+li {
+  font-size: 30px;
+  width: 100%;
 
+
+
+
+}
+li:hover {
+  a{
+    color:#243882;
+    font-weight: bold;
+  }
+}
+a{
+  color: black;
+}
+.center {
+  margin: 3%;
+  background-color: #FFF;
+  box-shadow: 2px 6px 6px 3px #9b9b9b;
+  border-color: #243882;
+  border-radius: 10px;
+  
+  width: 70%;
+}
+.secao-principal {
+  padding: 30px;
+
+}
+.secao-principal .infos{
+  border-radius: 20px;
+  color: white;
+  margin-top: 40px;
+  height: 62vh;
+  
+}
+p{
+  font-size: 30px;
+  padding: 30px;
+ 
+}
+img{
+  width: 300px;
+  display: flex;
+  opacity: 0.5;
+  justify-content: center;
+}
+
+
+
+`
+
+
+
+export const DivPrincipal = styled.div`
+display: flex;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+.subMenu{
+  background-color: #dedede;
+  box-shadow: 2px 6px 6px 3px #9b9b9b;
+  padding: 100px;
+  display: flex;
+  height: 68.5vh;
+  width: 10%;
+}
+ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+li {
+  font-size: 30px;
+  width: 100%;
+
+
+
+
+}
+li:hover {
+  a{
+    color:#243882;
+    font-weight: bold;
+  }
+}
+a{
+  color: black;
+}
+.center {
+  margin: 3%;
+  background-color: #FFF;
+  box-shadow: 2px 6px 6px 3px #9b9b9b;
+  border-radius: 10px;
+  width: 70%;
+}
+.secao-principal {
+  padding: 30px;
+
+}
+.secao-principal .infos{
+  border-radius: 20px;
+  color: white;
+  margin-top: 40px;
+  background-color: #243882;
+  height: 62vh;
+  
+}
+p{
+  font-size: 30px;
+  padding: 30px;
+ 
+}
+
+
+
+`
 
 export const DivProposta = styled.div`
 
