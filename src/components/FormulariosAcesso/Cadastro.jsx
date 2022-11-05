@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import registro from "../../img/registro.svg"
 import { DivBody, DivRegistro } from "../../style/styled";
 
 
 export default function Cadastro() {
-
+/*
     const [veiculo, setVeiculo] = useState({
         id: 0,
         nmVeiculo: "",
@@ -14,7 +14,7 @@ export default function Cadastro() {
         modelo: "",
         dsVeiculo: "",
         tripulantes: 0
-    })
+    }) */
 
     const [usuario, setUsuario] = useState({
         nome: "",
@@ -25,26 +25,47 @@ export default function Cadastro() {
         pSanguineo: "",
         login: "",
         senha: "",
-        id: 0,
         idade: 0,
         salario: 0,
+
         enderecos: {
-            id: 0 
+            estado: "",
+            cidade: "",
+            logradouro: "",
+            numero: "",
+            pais: "",
+            cep: 0 
         },
         contatos:  {
-            id: 0
+            telefone:0,
+            ddd: 0,
+            ddi: 0,
+            email: "",
+            contato: ""
         },
-        veiculo: {
-            id: 0
-        },
+            
+        
     })
     let metodo = "post"
+/*
+    const objCarro = JSON.parse(sessionStorage.getItem("cadastro-veiculo"))
+
+    console.log(objCarro.placa) */
 
     const handleChange = e => {
         setUsuario({ ...usuario, [e.target.name]: e.target.value })
+        console.log(usuario)
     }
 
+   /*useEffect((async)=> {
+        fetch(`http://localhost:8080/SafeCarApp/rest/veiculo/listar/${objCarro.placa}`).then((resp)=> {
+            return resp.json();
+        }).then((resp)=> {
+     
+        })
+    }, [])*/
 
+/*
     const handleSubmit = e => {
         e.preventDefault()
         
@@ -59,8 +80,8 @@ export default function Cadastro() {
             sessionStorage.setItem("dados-usuario", JSON.stringify(usuario))
             window.location = "/area-usuario"
         })
-    }
-
+    }*/
+    
 
     return (
         <DivBody>
@@ -70,7 +91,7 @@ export default function Cadastro() {
                         <img src={registro} alt="" />
                     </div>
                     <div className="form">
-                        <form  onSubmit={handleSubmit}>
+                        <form  onSubmit=''>
                             <div className="title">
 
                                 <h1>Cadastre-se</h1>
@@ -166,11 +187,11 @@ export default function Cadastro() {
                                 </div>
                                 <div className="input-box">
                                     <label>Nome para contato</label>
-                                    <input type="text" name="contatonm" id="" placeholder="Nome para contato" required onChange={handleChange}/>
+                                    <input type="text" name="contatos" id="" placeholder="Nome para contato" required onChange={handleChange}/>
                                 </div>
                                 <div className="input-box">
                                     <label>Telefone para contato</label>
-                                    <input type="tel" name="tel" id="" placeholder="Sem ddd" required onChange={handleChange}/>
+                                    <input type="tel" name="telefone" id="" placeholder="Sem ddd" required onChange={handleChange}/>
                                 </div>
                                 <div className="input-box">
                                     <label>DDD</label>

@@ -1,19 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { DivPrincipal } from "../../style/styled";
+import React, { useEffect } from "react";
+import { DivInfoPessoal } from "../../style/styled";
+import zerati from "../../img/zerati.png"
+
+import MenuLateral from "../ComponentesEstaticos/MenuLateral";
 
 
 export default function AreaUser() {
+    /*
+    const valida = sessionStorage.getItem("usuario-validado")
+    
+
+    useEffect(()=> {
+        if (valida == null) {
+            alert("Você precisa estar logado para acessar!")
+            window.location = "/usuario/login"
+        }
+
+    }, [])*/
+    
     return (
-        <DivPrincipal>
+        <DivInfoPessoal>
 
         <div className="subMenu">
-        <ul>
-            <li><Link to="/" >Aplicação do Software</Link></li>
-            <li><Link to="/info-pessoal" >Informacoes Pessoais</Link></li>
-            <li><Link to="/" >Controle de acesso</Link></li>
-            <li><Link to="/" >Ajuda</Link></li>
-        </ul>
+        <MenuLateral/>     
         </div>
         <div className="center">
 
@@ -26,7 +35,10 @@ export default function AreaUser() {
 
         </div>
         </div>
-        </DivPrincipal>
+        <div className="imagem">
+            <img src={zerati} alt="" />
+        </div>
+        </DivInfoPessoal>
 
     )
 }

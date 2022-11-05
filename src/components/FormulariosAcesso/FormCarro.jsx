@@ -16,19 +16,11 @@ export default function FormCarro() {
     })
 
 
-
-
     let metodo = "post"
 
     const handleChange = e => {
         setVeiculo({ ...veiculo, [e.target.name]: e.target.value })
     }
-
-    /*const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(veiculo)
-    }*/
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -45,27 +37,7 @@ export default function FormCarro() {
             window.location = "/usuario/cadastro-usuario"
 
         })
-        /*.then(()=> {
-            window.location = "/usuario/cadastro-usuario"*/
-    
-        
-        
     }
-        /*window.location = "/usuario/cadastro-usuario"*/
-/*useEffect(()=> {
-    const response =  fetch(
-        `http://localhost:8080/SafeCarApp/rest/veiculo/listar/${veiculo.placa}`.then((resp)=> {
-            return resp.json();
-        }).then((resp)=> {
-            setVeiculo(resp)
-            console.log(resp)
-        })
-        
-    )
-
-}, [])*/
-
-
 return (
 
     <DivBody>

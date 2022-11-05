@@ -16,7 +16,7 @@ export default function Cards() {
                 <div>
 
                     <h1>Segurança</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eos odit quaerat doloremque, rem officia quos voluptas consectetur. Ratione cupiditate repudiandae debitis animi voluptatem suscipit incidunt aliquid inventore repellendus dolore.</p>
+                    <p>Deixe que nosso sistema monitore sua viagem, indicando o tempo ideal de dirigir e identificando sinais sonolentos no piloto! Nosso serviço oferece para o piloto e os passageiros mais segurança em realizar suas viagens! Viaje com sua família e amigos sem se preocupar!</p>
                 </div>
                 <img src={seguranca} alt="" />
             </div>
@@ -27,7 +27,7 @@ export default function Cards() {
             <div className="cards">
                 <div>
                     <h1>Conforto</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eos odit quaerat doloremque, rem officia quos voluptas consectetur. Ratione cupiditate repudiandae debitis animi voluptatem suscipit incidunt aliquid inventore repellendus dolore.</p>
+                    <p>Viaje com conforto com sua família e amigos, sem estresse e preocupações! O sistema monitora sua viagem fornecendo estatísticas coesas, agregando na sua experiência realizando o passeio!</p>
                 </div>
                 <img src={banner3} alt="" />
             </div>
@@ -36,7 +36,7 @@ export default function Cards() {
             <div className="cards">
                 <div>
                     <h1>Tecnologia</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eos odit quaerat doloremque, rem officia quos voluptas consectetur. Ratione cupiditate repudiandae debitis animi voluptatem suscipit incidunt aliquid inventore repellendus dolore.</p>
+                    <p>Nossa I.A monitora com seus sensores de movimentos e mapeamento muscular todos os movimentos, tempo de viagem, indicando os melhores momentos para descansar e recarregar suas energias, trazendo muito mais segurança em suas viagens! </p>
                 </div>
                 <img src={machinel} alt="" />
             </div>

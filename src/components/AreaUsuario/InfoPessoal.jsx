@@ -1,34 +1,46 @@
 import React from "react";
-import { DivInfoPessoal, DivPrincipal } from "../../style/styled";
-import { Link } from "react-router-dom";
-import logo from "../../img/logo.png"
+import { DivInfoPessoal } from "../../style/styled";
+import jeep from "../../img/jeep.png"
+import MenuLateral from "../ComponentesEstaticos/MenuLateral";
 
 
 export default function InfoPessoal() {
-    const usuarioObj = JSON.parse(sessionStorage.getItem("dados-usuario"))
+/*
+    const valida = sessionStorage.getItem("usuario-validado")
+    
+
+    useEffect(()=> {
+        if (valida) {
+            alert("Você precisa estar logado para acessar!")
+            window.location = "/usuario/login"
+        }
+    }, [])*/
+    
 
     return(
         <DivInfoPessoal>
-
         <div className="subMenu">
-        <ul>
-            <li><Link to="/" >Aplicação do Software</Link></li>
-            <li><Link to="/info-pessoal" >Informacoes Pessoais</Link></li>
-            <li><Link to="/" >Controle de acesso</Link></li>
-            <li><Link to="/" >Ajuda</Link></li>
-        </ul>
+        <MenuLateral/>     
         </div>
         <div className="center">
-            <img src={logo} alt="" />
 
         <div className="secao-principal">
-            <h1>Olá , seja bem vindo a sessão principal do sístema!</h1>
+            <h1>Olá, nessa seção você pode visualizar seus dados pessoais!</h1>
             <div className="infos">
-
-            <p>Aqui estão alguns detalhes do nosso projeto:</p>
+            <p>Nome do usuario:</p>
+            <p>Login:</p>
+            <p>Placa do veículo:</p>
+            <p>modelo do veículo:</p>
+            <p>Idade:</p>
+            <p>Nacionalidade:</p>
+            <p>Tipo Sanguineo:</p>
+            <p>Nome do usuario:</p>
             </div>
 
         </div>
+        </div>
+        <div className="imagem">
+            <img src={jeep} alt="" />
         </div>
         </DivInfoPessoal>
 
