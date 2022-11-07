@@ -1,6 +1,8 @@
 import React, {  useState } from "react";
-import { DivBody, DivRegistro } from "../../style/styled";
+import { DivBody, DivLogin, DivRegistro } from "../../style/styled";
 import eletrico from "../../img/eletrico2.svg"
+import { useEffect } from "react";
+import maserattiLogin from "../../img/13902.jpg"
 
 
 export default function Login() {
@@ -30,6 +32,8 @@ export default function Login() {
         );
 
         const data = await response.json();
+
+   
         
         
         if (data) {
@@ -44,10 +48,10 @@ export default function Login() {
 
     return (
         <DivBody>
-            <DivRegistro>
+            <DivLogin>
                 <div className="container">
                     <div className="form-image">
-                        <img src={eletrico} alt="" />
+                        <img src={maserattiLogin} alt="" />
                     </div>
                     <div className="form">
                         <form onSubmit={logar}>
@@ -81,7 +85,7 @@ export default function Login() {
 
                     </div>
                 </div>
-            </DivRegistro>
+            </DivLogin>
         </DivBody>
     )
 }

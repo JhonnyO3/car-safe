@@ -5,6 +5,8 @@ import MenuLateral from "../ComponentesEstaticos/MenuLateral";
 
 
 export default function InfoPessoal() {
+    const usuario = JSON.parse(sessionStorage.getItem("usuario-validado")) 
+
 /*
     const valida = sessionStorage.getItem("usuario-validado")
     
@@ -25,16 +27,14 @@ export default function InfoPessoal() {
         <div className="center">
 
         <div className="secao-principal">
-            <h1>Olá, nessa seção você pode visualizar seus dados pessoais!</h1>
+            <h1><span>{usuario.nome}</span>, nessa seção você pode visualizar e alterar seus dados pessoais!</h1>
             <div className="infos">
-            <p>Nome do usuario:</p>
-            <p>Login:</p>
-            <p>Placa do veículo:</p>
-            <p>modelo do veículo:</p>
-            <p>Idade:</p>
-            <p>Nacionalidade:</p>
-            <p>Tipo Sanguineo:</p>
-            <p>Nome do usuario:</p>
+            <p>Nome do usuario: <span>{usuario.nome}</span></p>
+            <p>Login:<span>{usuario.login}</span></p>
+            <p>id do Veiculo: {usuario.placa}</p>
+            <p>Idade: <span>{usuario.idade}</span></p>
+            <p>Nacionalidade: <span>{usuario.nacionalidade}</span></p>
+            <p>Tipo Sanguineo: <span>{usuario.tpSanguineo}</span></p>
             </div>
 
         </div>

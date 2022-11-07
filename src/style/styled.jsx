@@ -1,6 +1,152 @@
 import styled from "styled-components";
 
 
+export const DivLogin = styled.div`
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+
+}
+
+.input-group{
+display: flex;
+flex-direction: column;
+
+justify-content: space-between;
+padding: 1rem 0;
+}
+.input-box{
+display: flex;
+width: 50vh;
+flex-direction: column;
+margin-bottom: 1.1rem;
+
+}
+.input-box input { 
+margin: 0.6rem;
+padding: 0.8rem 1.2rem;
+border: none;
+border-radius: 10px;
+box-shadow: 1px 1px 6px #00001c;
+}
+.input-box textarea{
+width: 75vh;
+box-shadow: 1px 1px 6px #00001c;
+margin: 0.6rem;
+padding: 0.8rem 1.2rem;
+border: none;
+border-radius: 10px;
+}
+.input-box select{
+width: 20vh;
+box-shadow: 1px 1px 6px #00001c;
+margin: 0.6rem;
+padding: 0.8rem 1.2rem;
+border: none;
+border-radius: 10px;
+}
+
+.input-box input:hover{
+background-color: #eeeeee75;
+}
+
+
+.container {
+width: 100%;
+height: 100vh;
+display: flex;
+box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
+}
+.form-image {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+align-items: center;
+background-color: #ffffff;
+height: 100%;
+}
+.form-image img {
+width: 100%;
+height: 100%;
+}
+.form {
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: #fff;
+padding: 4rem;
+
+}
+.title {
+margin-bottom: 3rem;
+display: flex;
+justify-content: space-around;
+}
+
+button{
+width: 100%;
+background-color: #111C22;
+color: white;
+font-size: 25px;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
+font-weight: bold;
+}
+button:hover{
+  background-color: #4057b0;
+
+
+}
+
+`
+
+
+export const DivCam = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+margin-left: 200px;
+flex-direction: column;
+font-family: sans-serif;
+padding-bottom: 200px;
+
+.title{
+  position: relative;
+  top: 50px;
+  p{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+h1{
+  font-weight: bold;
+  color: #6F84D2;
+  font-size: 35px;
+
+}
+
+
+.webcam{
+  display: flex;
+  margin-top: 10vh;
+
+
+}
+
+
+
+
+`
 
 export const DivPlano = styled.div`
 margin: 0;
@@ -21,7 +167,7 @@ font-family: sans-serif;
 
 }
 .painel{
-  background-color: #fbfbfb;
+  background-color: #222222;
   box-shadow: 3px 3px 10px black;
   border-radius: 10px;
   margin-left: 25%;
@@ -113,8 +259,8 @@ display: flex;
 }
 .subMenu{
   display: flex;
-  background-color: #dedede;
-  box-shadow: 2px 6px 6px 3px #9b9b9b;
+  background-color: #0a0a0a;
+  box-shadow: 2px 6px 6px 3px #0a0a0a;
   padding: 100px;
   
   position: fixed;
@@ -139,6 +285,7 @@ display: flex;
 li {
   font-size: 30px;
   width: 100%;
+  margin-top: 5vh;
   
 
 
@@ -147,19 +294,19 @@ li {
 }
 li:hover {
   a{
-    color:#243882;
+    color:#3e5197;
     font-weight: bold;
   }
 }
 a{
-  color: black;
+  color: white;
 }
 
 .title {
   text-align: left;
   width: 400px;
   font-weight: bold;
-  color: #243882;
+  color: #6f84d2;
   font-size: 30px;
 
   
@@ -169,8 +316,7 @@ a{
 }
 
 `
-
-export const DivInfoPessoal = styled.div`
+export const DivAreaUsuario = styled.div`
 display: flex;
 *{
   margin: 0;
@@ -180,28 +326,47 @@ display: flex;
   text-decoration: none;
 }
 
+span{
+  color: #5471db;
+  font-size: 50px;
+  font-weight: bold;
+}
+
 
 .center {
   margin: 3%;
-  background-color: #FFF;
-  box-shadow: 2px 6px 6px 3px #9b9b9b;
-  border-color: #243882;
+  background-color: #222222;
+  box-shadow: 2px 6px 6px 0px #000000;
   border-radius: 10px;
   height: 100%;
   margin-left: 25%;
   position: absolute;
-  
+  padding-bottom: 50px;
   width: 70%;
 }
 .secao-principal {
+
   padding: 30px;
   font-size: 30px;
   h1{
     width: 100%;
-    color: #243882;
+    color: white;
     font-weight: bold;
     text-align: left;
     margin-top: 30px;
+    font-size: 50px;
+    background-color: #181818;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+
+    span{
+      font-size: 70px;
+      font-weight: bold;
+      color: #5471db;
+    }
     
   }
 
@@ -210,12 +375,15 @@ display: flex;
   border-radius: 20px;
   color: white;
   margin-top: 40px;
-  background-color: #f24f36;
+  background-color: #181818;
   padding: 20px;
+  
   height: 67vh;
+
   p{
     color: white;
     padding: 7px;
+    font-size: 45px;
   }
   
 }
@@ -228,8 +396,8 @@ p{
 img{
   display: flex;
   left: 100vh;
-  top: 55%;
-  width: 54%;
+  top: 74vh;
+  width: 49%;
   position: absolute;
   
 }
@@ -237,6 +405,96 @@ img{
 
 
 `
+
+export const DivInfoPessoal = styled.div`
+display: flex;
+*{
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+span{
+  color: #5471db;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+.center {
+  margin: 3%;
+  background-color: #222222;
+  box-shadow: 2px 6px 6px 0px #000000;
+  border-color: #243882;
+  border-radius: 10px;
+  height: 100%;
+  margin-left: 25%;
+  position: absolute;
+  padding-bottom: 50px;
+  width: 70%;
+}
+.secao-principal {
+  padding: 30px;
+  font-size: 30px;
+  h1{
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 30px;
+    font-size: 50px;
+    background-color: #181818;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+
+    span{
+      font-size: 70px;
+      font-weight: bold;
+      color: #5471db;
+    }
+    
+  }
+
+}
+.secao-principal .infos{
+  border-radius: 20px;
+  color: white;
+  margin-top: 40px;
+  background-color: #181818;
+  padding: 20px;
+  height: 67vh;
+
+  p{
+    color: white;
+    padding: 7px;
+    font-size: 45px;
+  }
+  
+}
+p{
+  font-size: 30px;
+  color: black;
+ 
+}
+
+img{
+  display: flex;
+  left: 111vh;
+  top: 59%;
+  width: 44%;
+  position: absolute;
+  
+}
+
+
+
+`
+
 
 
 
@@ -316,7 +574,8 @@ export const DivProposta = styled.div`
 
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 width: 100%;
-background-color: #F0F0F0;
+background-color: #222222;
+color: white;
 position: relative;
 top: 20vh;
 padding-top: 150px;
@@ -346,10 +605,112 @@ p{
 
 export const DivBody = styled.body`
 width: 100%;
-height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+height: 70%;
+`
+export const DivUser = styled.div`
+*{
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.input-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 70vh;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+
+}
+.input-box input { 
+  margin: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #00001c;
+}
+.input-box textarea{
+  width: 85vh;
+  box-shadow: 1px 1px 6px #00001c;
+  margin: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+}
+.input-box select{
+  width: 20vh;
+  box-shadow: 1px 1px 6px #00001c;
+  margin: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.input-box input:hover{
+  background-color: #eeeeee75;
+}
+
+
+.container {
+  height: 100%;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
+}
+.form-image {
+  width: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+align-items: center;
+background-color: #ffffff;
+height: 100%;
+width: 100%;
+}
+.form-image img {
+
+}
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 4rem;
+
+}
+.title {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+button{
+  width: 100%;
+  background-color: #970F23;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
+  font-weight: bold;
+
+}
+button:hover{
+  background-color: #ba364a;
+
+
+}
 `
 
 export const DivRegistro = styled.div`
@@ -381,7 +742,7 @@ export const DivRegistro = styled.div`
   box-shadow: 1px 1px 6px #00001c;
 }
 .input-box textarea{
-  width: 75vh;
+  width: 85vh;
   box-shadow: 1px 1px 6px #00001c;
   margin: 0.6rem;
   padding: 0.8rem 1.2rem;
@@ -404,21 +765,22 @@ export const DivRegistro = styled.div`
 
 .container {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   display: flex;
   box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
 }
 .form-image {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
-  padding: 3rem;
-  background-color: #c6c6c6;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+align-items: center;
+background-color: #ffffff;
+height: 100vh;
 }
 .form-image img {
-  width: 41rem;
+width: 100%;
+height: 100vh;
 }
 .form {
   width: 50%;
@@ -438,13 +800,18 @@ export const DivRegistro = styled.div`
 
 button{
   width: 100%;
-  background-color: #243782;
+  background-color: #970F23;
   color: white;
   font-size: 25px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
   font-weight: bold;
+
+}
+button:hover{
+  background-color: #ba364a;
+
 
 }
 `
@@ -456,13 +823,15 @@ width: 100%;
 `
 export const DivCards = styled.div`
 margin-top: 100px;
+color: white;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-background-color: #F0F0F0;
+background-color: #222222;
 position: relative;
 top: 20vh;
 padding-top: 150px;
 font-size: 30px;
 border-radius: 30px;
+box-shadow: 100px, 5px, 5px white;
 padding-bottom: 150px;
 
 margin-bottom: 90px;
@@ -490,16 +859,16 @@ width: 85%;
 margin-left: 120px;
 text-align: center;
 font-family: sans-serif;
-color: #3e3c3c;
+color: #8b8b8b;
 justify-content: center;
-margin-top: 40vh;
+margin-top: 70vh;
 
 h1{
   color: #243782;
   font-size: 40px;
 }
 p{
-  margin-top: 30px;
+  margin-top: 20vh;
   width: 100%;
   justify-content: center;
   text-align: center;
@@ -512,9 +881,12 @@ p{
 
 
 export const DivBanner = styled.div`
-position: relative;
+*{
+  position: relative;
+}
 width: 100%;
 .banner{
+  width: 100%;
     margin: 0;
     padding: 0;
     position: relative;
@@ -532,7 +904,7 @@ img{
 }
 .texto{
     position: relative;
-    top: 45vh;
+    top: 65vh;
     font-family:  sans-serif;
     color: white;
     margin-left: 7vh;
@@ -542,13 +914,13 @@ img{
 
 
 export const DivHeader = styled.header`
-
    font-family : sans-serif;
    padding: 1vh;
    font-size: 1.5rem;
-   background-color: #F0F0F0 ;
-   color: #243782;
+   background-color: #000000 ;
+   color: white;
    display: flex;
+   position: static;
    justify-content: space-between;
    list-style: none;
    span{
@@ -582,7 +954,7 @@ export const DivHeader = styled.header`
     }
   
      a {
-      color: #243782;
+      color: white;
       display: flex;
       justify-content: space-aroud;
       font-size: 25px;
@@ -617,8 +989,8 @@ export const DivHeader = styled.header`
     }
     .logo img{
         width: 75%;
-        padding-top: 10px;
         margin-left: 3vh;
+        margin-bottom: 10px;
     }
     @media screen and (min-width: 375px){
       .logo img{

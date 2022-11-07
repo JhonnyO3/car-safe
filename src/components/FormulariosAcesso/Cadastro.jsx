@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import registro from "../../img/registro.svg"
-import { DivBody, DivRegistro } from "../../style/styled";
+import red1 from "../../img/red1.jpg"
+
+import { DivBody, DivRegistro, DivUser } from "../../style/styled";
 
 
 export default function Cadastro() {
@@ -85,10 +87,10 @@ export default function Cadastro() {
 
     return (
         <DivBody>
-            <DivRegistro>
+            <DivUser>
                 <div className="container">
                     <div className="form-image">
-                        <img src={registro} alt="" />
+                        <img src={red1} alt="" />
                     </div>
                     <div className="form">
                         <form  onSubmit=''>
@@ -235,7 +237,7 @@ export default function Cadastro() {
                         </form>
                     </div>
                 </div>
-            </DivRegistro>
+            </DivUser>
         </DivBody>
     )
 }

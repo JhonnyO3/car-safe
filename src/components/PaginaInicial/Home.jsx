@@ -1,6 +1,7 @@
 import React from "react";
 import banner from "../../img/banner1copy.jpg"
 import banner1 from "../../img/banner1.webp"
+import banner2 from "../../img/interior.jpg"
 
 
 import { DivBanner, DivMain } from "../../style/styled";
@@ -17,7 +18,7 @@ export default function Home() {
         <DivMain>
         <DivBanner>
         <div className="banner">
-            <img src={banner} alt="" />
+            <img src={banner2} alt="" />
             <div className="texto">
 
 

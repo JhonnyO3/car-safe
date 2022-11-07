@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { DivBody, DivRegistro } from "../../style/styled";
 import registro from "../../img/eletrico2.svg"
+import red from "../../img/red.webp"
+import marca from "../../img/marca.jpg"
+import white from "../../img/white.jpg"
+import vermelho from "../../img/vermelh.jpg"
+
+
 
 
 export default function FormCarro() {
@@ -45,7 +51,7 @@ return (
             <p className="aviso"></p>
             <div className="container">
                 <div className="form-image">
-                    <img src={registro} alt="" />
+                    <img src={vermelho} alt="" />
                 </div>
                 <div className="form">
                     <form onSubmit={handleSubmit} >

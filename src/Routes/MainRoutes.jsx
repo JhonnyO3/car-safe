@@ -4,6 +4,7 @@ import AreaUser from "../components/AreaUsuario/AreaUser";
 import ControleAcesso from "../components/AreaUsuario/ControleAcesso";
 import InfoPessoal from "../components/AreaUsuario/InfoPessoal";
 import PlanosSaude from "../components/AreaUsuario/PlanosSaude";
+import Software from "../components/AreaUsuario/Software";
 import Cadastro from "../components/FormulariosAcesso/Cadastro";
 import FormCarro from "../components/FormulariosAcesso/FormCarro";
 import Login from "../components/FormulariosAcesso/Login";
@@ -20,6 +21,7 @@ export default function MainRoutes() {
             <Route path="/info-pessoal" element={<InfoPessoal/>} />
             <Route path="/controle-acesso" element={<ControleAcesso/>} />
             <Route path="/plano-saude" element={<PlanosSaude/>} />
+            <Route path="/software" element={<Software/>} />
         </Routes>
     )
 }

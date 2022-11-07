@@ -15,7 +15,8 @@ export default function MenuLateral() {
             <div className="title">
                 <h1>Menu</h1>
             </div>
-            <li><Link to="/" >Aplicação do Software</Link></li>
+            <li><Link to="/area-usuario" >Area Usuario</Link></li>
+            <li><Link to="/software" >Aplicação do Software</Link></li>
             <li><Link to="/info-pessoal" >Informacoes Pessoais</Link></li>
             <li><Link to="/controle-acesso" >Controle de acesso</Link></li>
             <li><Link to="/plano-saude" >Planos de Saude</Link></li>
