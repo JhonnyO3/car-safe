@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
-import registro from "../../img/registro.svg"
-import red1 from "../../img/red1.jpg"
-import motor from "../../img/motorveneno.jpg"
-import mc20  from "../../img/mc20.jpg" 
-
-
-import { DivBody, DivRegistro, DivUser } from "../../style/styled";
-import AreaUser from "../AreaUsuario/AreaUser";
+import { useParams } from "react-router-dom";
+import { DivBody, DivUser } from "../../style/styled";
 import Header from "../ComponentesEstaticos/Header";
+import mc20  from "../../img/mc20.jpg" 
+import hibrid from "../../img/hibrida.jpg"
 
 
-export default function Cadastro() {
+export default function Editar() {
     
-    const objCarro = JSON.parse(sessionStorage.getItem("cadastro-veiculo")) 
-
+    let {id} = useParams()
+    
     const [user, setUser] = useState({
+        id: id,
         nome: "",
         profissao: "",
         raca: "",
@@ -23,147 +20,71 @@ export default function Cadastro() {
         tpSanguineo: "",
         login: "",
         senha: "",
-        idade:0,
-        salario:0,
+        idade: 0,
+        salario: 0,
     })
     
-
-
-
-
-    let metodo = "post"
-
-
+    
     const handleChange = e => {
         setUser({ ...user, [e.target.name]: e.target.value })
         console.log(user)
     }
-
-
-
-    /*const handleSubmit = e => {
-        e.preventDefault()
-        fetch(`http://localhost:8080/SafeCarApp/rest/veiculo/cadastro-veiculo/`, {
-            method: metodo,
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(dadosUser)
-
-    }).then(() => {
-        
-        })
-    }  */
-    const [dadosUser, setDadosUser] = useState({
-        nmVeiculo: objCarro.nmVeiculo,
-        tipo: objCarro.tipo,
-        cor: objCarro.cor,
-        placa: objCarro.placa,
-        modelo: objCarro.modelo,
-        dsVeiculo: objCarro.dsVeiculo,
-        tripulantes: objCarro.tripulantes,
-
-        user: {     
-            nome: "",
-            profissao: "",
-            raca:"",
-            genero:"" ,
-            nacionalidade:"" ,
-            tpSanguineo: "",
-            login: "",
-            senha: "",
-            idade: "",
-            salario: 0 
-        }
-    })
-
+  
+    
     const handleSubmit = e => {
         e.preventDefault()
-        dadosUser.user.nome = user.nome
-        dadosUser.user.profissao = user.profissao
-        dadosUser.user.raca = user.raca
-        dadosUser.user.genero = user.genero
-        dadosUser.user.nacionalidade = user.nacionalidade
-        dadosUser.user.tpSanguineo = user.tpSanguineo
-        dadosUser.user.login = user.login
-        dadosUser.user.senha = user.senha
-        dadosUser.user.idade = user.idade
-        dadosUser.user.salario = user.salario
-
-        
-        
-        
-        fetch(`http://localhost:8080/SafeCarApp/rest/veiculo/cadastro-veiculo/`, {
-            method: metodo,
+        sessionStorage.setItem("usuario", JSON.stringify(user))
+        fetch(`http://localhost:8080/SafeCarApp/rest/usuario/${id}`, {
+            method: "put",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(dadosUser)
+            body: JSON.stringify(user)
         }).then((error)=> {
             console.log(error)
-
-
-
-
+            
         }).then(()=> {
-            window.location = "/usuario/login"
+            window.location = "area-usuario"
         })
-            
+
+
     }
-    
 
-
-    /* useEffect((async) => {
-        fetch(`http://localhost:8080/SafeCarApp/rest/veiculo/listar/${objCarro.placa}`).then((resp) => {
-            return resp.json();
-        }).then((resp) => {
-            setVeiculo(resp)
-            console.log(veiculo)
-
-        })
-    }, []) */
-
-    /*
-        const handleSubmit = e => {
-            e.preventDefault()
-            
-            fetch(`http://localhost:8080/SafeCarApp/rest/usuario`, {
-                method: metodo,
-                headers:{
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(usuario)
-            }).then(()=> {
-                console.log(usuario)
-                sessionStorage.setItem("dados-usuario", JSON.stringify(usuario))
-                window.location = "/area-usuario"
+    useEffect(()=>{
+        if(id){
+            fetch(`http://localhost:8080/SafeCarApp/rest/usuario/${id}`)
+            .then((resp)=>{
+                return(resp.json())
+            }).then(data=>{
+                setUser(data)
             })
-        }*/
+        }
+    },[id])
+
+
+
 
 
     return (
         <div>
-
             <Header />
             <DivBody>
-
-
                 <DivUser>
                     <div className="container">
                         <div className="form-image">
-                            <img src={mc20} alt="" />
+                            <img src={hibrid} alt="" />
                         </div>
                         <div className="form">
                             <form onSubmit={handleSubmit}>
                                 <div className="title">
 
-                                    <h1 className="titlee">Cadastre-se</h1>
+                                    <h1>Editar usuario</h1>
                                 </div>
                                 <div className="input-group">
                                     <div className="input-box">
                                         <label>Nome Completo</label>
                                         <input type="text"
-                                            name= "nome"
+                                            name="nome"
                                             placeholder="Digite seu nome"
                                             required
                                             onChange={handleChange} />
@@ -171,7 +92,7 @@ export default function Cadastro() {
                                     <div className="input-box">
                                         <label>Login</label>
                                         <input type="text"
-                                            name= "login"
+                                            name="login"
                                             placeholder="Digite seu Login"
                                             required
                                             onChange={handleChange} />
@@ -180,7 +101,6 @@ export default function Cadastro() {
                                         <label>Senha</label>
                                         <input type="password"
                                             name="senha"
-
                                             placeholder="Digite sua Senha"
                                             required
                                             onChange={handleChange} />
@@ -189,7 +109,6 @@ export default function Cadastro() {
                                         <label>Profissão</label>
                                         <input type="text"
                                             name="profissao"
-
                                             placeholder="Digite sua profissao"
                                             required
                                             onChange={handleChange} />
@@ -198,7 +117,6 @@ export default function Cadastro() {
                                         <label>Idade</label>
                                         <input type="text"
                                             name="idade"
-
                                             placeholder="Digite sua idade"
                                             required
                                             onChange={handleChange} />
@@ -207,7 +125,6 @@ export default function Cadastro() {
                                         <label>Salario</label>
                                         <input type="text"
                                             name="salario"
-
                                             placeholder="Digite seu salario"
                                             required
                                             onChange={handleChange} />
@@ -215,11 +132,11 @@ export default function Cadastro() {
                                     <div className="input-box">
                                         <label>Genero</label>
                                         <div className="gender-input">
-                                            <input type="radio" name="genero" value="M" id="sexo-m"   required onChange={handleChange} />
+                                            <input type="radio" name="genero" id="sexo-m" value="M" required onChange={handleChange} />
                                             <label form="sexo-m">Masculino</label>
                                         </div>
                                         <div className="gender-input">
-                                            <input type="radio" name="genero" id="sexo-f" value="F"  required onChange={handleChange} />
+                                            <input type="radio" name="genero" id="sexo-f" value="F" required onChange={handleChange} />
                                             <label form="sexo-f">Feminino</label>
                                         </div>
                                         <div className="gender-input">
@@ -229,19 +146,19 @@ export default function Cadastro() {
                                     </div>
                                     <div className="input-box">
                                         <label>Nacionalidade</label>
-                                        <input type="nacionalidade" name='nacionalidade'  placeholder="Digite sua nacionalidade" required onChange={handleChange} />
+                                        <input type="nacionalidade" name='nacionalidade' placeholder="Digite sua nacionalidade" required onChange={handleChange} />
                                     </div>
                                     <div className="input-box">
                                         <label>Tipo sanguineo</label>
-                                        <select name="tpSanguineo" id="tpSanguineo"   required onChange={handleChange}>
-                                            <option value="A+">A+</option>
-                                            <option value="A-">A-</option>
-                                            <option value="B+">B+</option>
-                                            <option value="B-">B-</option>
-                                            <option value="AB+">AB+</option>
-                                            <option value="AB-">AB-</option>
-                                            <option value="O+">O+</option>
-                                            <option value="O-">O-</option>
+                                        <select name="tpSanguineo" id="tpSanguineo" required onChange={handleChange}>
+                                            <option value="a+">A+</option>
+                                            <option value="a-">A-</option>
+                                            <option value="b+">B+</option>
+                                            <option value="b-">B-</option>
+                                            <option value="ab+">AB+</option>
+                                            <option value="ab-">AB-</option>
+                                            <option value="o+">O+</option>
+                                            <option value="o-">O-</option>
                                         </select>
                                         <div className="input-box">
                                             <label>raça</label>
@@ -254,7 +171,7 @@ export default function Cadastro() {
                                     </div>
 
                                 </div>
-                                <button>Enviar Cadastro</button>
+                                <button>Atualizar</button>
                             </form>
                         </div>
                     </div>
@@ -262,4 +179,11 @@ export default function Cadastro() {
             </DivBody>
         </div>
     )
+
+
+
+
+
+
+
 }

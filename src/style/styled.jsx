@@ -221,6 +221,9 @@ justify-content: center;
 margin-top: 100px;
 margin-bottom: 100px;
 display: flex;
+
+
+
 table{
   padding-left: 27%;
 

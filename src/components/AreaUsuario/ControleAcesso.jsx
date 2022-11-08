@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { DivControle, DivPlanilha, DivInfoPessoal } from "../../style/styled";
 import MenuLateral from "../ComponentesEstaticos/MenuLateral";
+import {FaEdit, FaTrash, AiFillDelete, FaTrashAlt} from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
 
 export default function ControleAcesso() {
@@ -17,6 +19,17 @@ export default function ControleAcesso() {
             console.log(error)
         })
     }, [])
+
+    const handleDelete = (id) =>{
+        fetch(`http://localhost:8080/SafeCarApp/rest/usuario/${id}`, {
+            method: "delete"
+        }).then(()=> {
+            console.log("excluido")
+            window.location = "/controle-acesso"
+        }).catch((error)=> {
+            console.log(error)
+        })
+    }
 
     return (
         <DivInfoPessoal>
@@ -42,7 +55,7 @@ export default function ControleAcesso() {
                                     <th>Tipo Sanguineo</th>
                                     <th>Login</th>
                                     <th>Idade</th>
-                                    <th>Veiculo</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,7 +68,8 @@ export default function ControleAcesso() {
                                         <td>{usuario.tpSanguineo}</td>
                                         <td>{usuario.login}</td>
                                         <td>{usuario.idade}</td>
-                                        <td>{usuario.veiculo}</td>
+                                        <td><Link to= {`editar-usuario/${usuario.id}`}></Link></td>
+                                        <td><button onClick={handleDelete.bind(this, usuario.id)}><FaTrashAlt className="icone" /></button></td>
                                     </tr>
 
                                 ]))}
