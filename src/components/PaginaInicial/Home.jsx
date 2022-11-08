@@ -8,28 +8,32 @@ import { DivBanner, DivMain } from "../../style/styled";
 import Cards from "./Cards";
 import Proposta from "./Proposta";
 import Solution from "./Solution";
+import AreaUser from "../AreaUsuario/AreaUser";
+import Header from "../ComponentesEstaticos/Header";
 
 export default function Home() {
 
 
 
-    return(
+    return (
         <div>
-        <DivMain>
-        <DivBanner>
-        <div className="banner">
-            <img src={banner2} alt="" />
-            <div className="texto">
+            <Header />
+
+            <DivMain>
+                <DivBanner>
+                    <div className="banner">
+                        <img src={banner2} alt="" />
+                        <div className="texto">
 
 
-            </div>
+                        </div>
+                    </div>
+                </DivBanner>
+                <Solution />
+                <Proposta />
+                <Cards />
+            </DivMain>
         </div>
-        </DivBanner>
-        <Solution/>
-        <Proposta/>
-        <Cards/>
-        </DivMain>
-        </div>
-        
+
     )
 }

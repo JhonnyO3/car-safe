@@ -30,7 +30,11 @@ export default function AreaUser() {
             <h1>Olá <span>{usuario.nome}</span>, seja bem vindo a área do usuario!!</h1>
             <div className="infos">
 
-            <p>Você pode conhecer nossa solução acessando o menu lateral da area do usuario!</p>
+            <p>- Você pode conhecer nossa solução acessando o menu lateral da area do usuario!</p>
+            <p>- É possível visualizar suas informações de cadastro acessando às "Informações Pessoais"!</p>
+            <p>- Os administradores tem acesso à todos os usuarios cadastrados!</p>
+            <p>- Veja os planos de saude disponíveis!</p>
+
             </div>
 
         </div>

@@ -70,16 +70,17 @@ background-color: #ffffff;
 height: 100%;
 }
 .form-image img {
-width: 100%;
+width: 137.8vh;
 height: 100%;
 }
 .form {
+  color: white;
 width: 50%;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-color: #fff;
+background-color: #181818;
 padding: 4rem;
 
 }
@@ -90,17 +91,18 @@ justify-content: space-around;
 }
 
 button{
+border: #ffffff;
 width: 100%;
-background-color: #111C22;
+background-color: #3d3d3d;
 color: white;
 font-size: 25px;
 padding: 10px;
-border-radius: 10px;
-box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
+border-radius: 20px;
+box-shadow: 5px 5px 10px #2a2a2a55 ;
 font-weight: bold;
 }
 button:hover{
-  background-color: #4057b0;
+  background-color: rgb(17, 48, 118);
 
 
 }
@@ -576,16 +578,14 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 width: 100%;
 background-color: #222222;
 color: white;
-position: relative;
-top: 20vh;
+position: static;
 padding-top: 150px;
 font-size: 20px;
 padding-bottom: 150px;
 display: flex;
-
 margin-bottom: 90px;
 img{
-  width: 700px;
+  width: 180%;
   padding-right: 50px;
   padding-top: 10px;
 }
@@ -667,25 +667,29 @@ export const DivUser = styled.div`
   box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
 }
 .form-image {
-  width: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
 align-items: center;
-background-color: #ffffff;
-height: 100%;
-width: 100%;
+background-color: #181818;
+height: 100vh;
+
+
 }
 .form-image img {
+width: 110%;
+height: 100%
+
 
 }
 .form {
-  width: 100%;
+  color: white;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #181818;
   padding: 4rem;
 
 }
@@ -696,18 +700,20 @@ width: 100%;
 }
 
 button{
+  border: #CDCCCA;
   width: 100%;
-  background-color: #970F23;
-  color: white;
+  background-color: #CDCCCA;
+  color: black;
   font-size: 25px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0,0,0,.212) ;
   font-weight: bold;
+  
 
 }
 button:hover{
-  background-color: #ba364a;
+  background-color: #A50A09;
 
 
 }
@@ -775,7 +781,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 align-items: center;
-background-color: #ffffff;
+background-color: #181818;
 height: 100vh;
 }
 .form-image img {
@@ -783,12 +789,13 @@ width: 100%;
 height: 100vh;
 }
 .form {
+  color: white;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #181818;
   padding: 4rem;
 
 }
@@ -799,6 +806,7 @@ height: 100vh;
 }
 
 button{
+  border: #970F23;
   width: 100%;
   background-color: #970F23;
   color: white;
@@ -817,17 +825,12 @@ button:hover{
 `
 
 export const DivMain = styled.div`
-position: absolute;
-width: 100%;
 
 `
 export const DivCards = styled.div`
-margin-top: 100px;
 color: white;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 background-color: #222222;
-position: relative;
-top: 20vh;
 padding-top: 150px;
 font-size: 30px;
 border-radius: 30px;
@@ -836,7 +839,8 @@ padding-bottom: 150px;
 
 margin-bottom: 90px;
 img{
-  width: 700px;
+  width: 100%;
+  height: 100%;
   padding-right: 200px;
   border-radius: 50%;
   padding-top: 30px;
@@ -861,7 +865,8 @@ text-align: center;
 font-family: sans-serif;
 color: #8b8b8b;
 justify-content: center;
-margin-top: 70vh;
+margin-top: 65vh;
+margin-bottom: 20vh;
 
 h1{
   color: #243782;
@@ -882,14 +887,12 @@ p{
 
 export const DivBanner = styled.div`
 *{
-  position: relative;
 }
 width: 100%;
 .banner{
   width: 100%;
     margin: 0;
     padding: 0;
-    position: relative;
     font-size: 40px;
     height: 300px;
     
@@ -900,7 +903,6 @@ img{
     margin: 0;
     padding: 0;
     width: 100%;
-    position: absolute;
 }
 .texto{
     position: relative;
@@ -911,49 +913,63 @@ img{
 }
 
 `
-
+export const DivCard = styled.div`
+margin-top: 20vh;
+`
 
 export const DivHeader = styled.header`
    font-family : sans-serif;
    padding: 1vh;
+   padding-bottom: 30px;
    font-size: 1.5rem;
-   background-color: #000000 ;
-   color: white;
+   background-color: #07070713;
+   width: 100%;
+   color: #ffffff;
    display: flex;
-   position: static;
-   justify-content: space-between;
    list-style: none;
-   span{
-      color: #FFF915;
-   }
+   position: fixed;
+   opacity: 0.9;
+   justify-content: space-between;
+   display: flex;
+   .posicao:scroll{
+
+    }
+
     ul{
+
       display: flex;
       
     }
-    li {
+    ul li {
       position: relative;
       display: inline;
       margin: 10px 20px 0 15px;
-    button {
+      button {
+      border: #070707;
+      position: relative;
+      bottom: 5px;
       color: white;
-      background-color: #243782;
+      background-color: #2c2c2c;
       border-radius: 3px;
       padding-left: 15px;
       padding-right: 15px;
       padding-bottom: 2px;
       font-size: 25px;
-      border-radius: 5px;
+      border-radius: 25px;
+      box-shadow: 5px 5px 10px #69696936 ;
+
    }
    button:hover{
-    background-color: #a0a4b5;
-
-
+    background-color: #070707;
+   }
+   :scroll-behavior {
+    opacity: 0.1;
    }
      
       
     }
   
-     a {
+     ul li a {
       color: white;
       display: flex;
       justify-content: space-aroud;
@@ -968,7 +984,6 @@ export const DivHeader = styled.header`
     }
     .login {
       color: black;
-      background-color: #FFF915;
       border-radius: 3px;
       padding-left: 15px;
       padding-right: 15px;
@@ -977,7 +992,10 @@ export const DivHeader = styled.header`
     } 
     img{
         justify-content: space-between;
-        width: 25%;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 10px;
         
     }
     h1{
@@ -988,9 +1006,11 @@ export const DivHeader = styled.header`
         
     }
     .logo img{
-        width: 75%;
-        margin-left: 3vh;
-        margin-bottom: 10px;
+      position: relative;
+      top: 12px;
+      bottom: 20px;
+      left: 30px;
+
     }
     @media screen and (min-width: 375px){
       .logo img{

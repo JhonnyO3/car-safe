@@ -1,8 +1,10 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { DivBody, DivLogin, DivRegistro } from "../../style/styled";
 import eletrico from "../../img/eletrico2.svg"
 import { useEffect } from "react";
 import maserattiLogin from "../../img/13902.jpg"
+import AreaUser from "../AreaUsuario/AreaUser";
+import Header from "../ComponentesEstaticos/Header";
 
 
 export default function Login() {
@@ -33,9 +35,9 @@ export default function Login() {
 
         const data = await response.json();
 
-   
-        
-        
+
+
+
         if (data) {
             sessionStorage.setItem("usuario-validado", JSON.stringify(data));
             window.location = "/area-usuario";
@@ -47,45 +49,50 @@ export default function Login() {
     }
 
     return (
-        <DivBody>
-            <DivLogin>
-                <div className="container">
-                    <div className="form-image">
-                        <img src={maserattiLogin} alt="" />
-                    </div>
-                    <div className="form">
-                        <form onSubmit={logar}>
-                            <div className="title">
-                                <h1>Login</h1>
-                            </div>
+        <div>
 
-                            <div className="input-group">
-                 
-                                <div className="input-box">
-                                    <label>Login usuario</label>
-                                    <input type="text"
-                                        name="login"
-                                        placeholder="Digite seu email / login"
-                                        onChange={handleChange}
-                                        required />
+            <Header />
+            <DivBody>
+
+                <DivLogin>
+                    <div className="container">
+                        <div className="form-image">
+                            <img src={maserattiLogin} alt="" />
+                        </div>
+                        <div className="form">
+                            <form onSubmit={logar}>
+                                <div className="title">
+                                    <h1>Login</h1>
                                 </div>
 
+                                <div className="input-group">
 
-                                <div className="input-box">
-                                    <label>Senha</label>
-                                    <input type="text"
-                                        name="senha"
-                                        placeholder="Digite sua senha"
-                                        onChange={handleChange}
-                                        required />
+                                    <div className="input-box">
+                                        <label>Login usuario</label>
+                                        <input type="text"
+                                            name="login"
+                                            placeholder="Digite seu email / login"
+                                            onChange={handleChange}
+                                            required />
+                                    </div>
+
+
+                                    <div className="input-box">
+                                        <label>Senha</label>
+                                        <input type="text"
+                                            name="senha"
+                                            placeholder="Digite sua senha"
+                                            onChange={handleChange}
+                                            required />
+                                    </div>
                                 </div>
-                            </div>
-                            <button>Logar</button>
-                        </form>
+                                <button>Logar</button>
+                            </form>
 
+                        </div>
                     </div>
-                </div>
-            </DivLogin>
-        </DivBody>
+                </DivLogin>
+            </DivBody>
+        </div>
     )
 }

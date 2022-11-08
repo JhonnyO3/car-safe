@@ -20,7 +20,7 @@ export default function MenuLateral() {
             <li><Link to="/info-pessoal" >Informacoes Pessoais</Link></li>
             <li><Link to="/controle-acesso" >Controle de acesso</Link></li>
             <li><Link to="/plano-saude" >Planos de Saude</Link></li>
-            <li><Link to="/" >Ajuda</Link></li>
+            <li><Link to="/" >Voltar</Link></li>
         </ul>
         </div>
         </DivMenuLateral>
