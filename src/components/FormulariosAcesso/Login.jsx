@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { DivBody, DivLogin, DivRegistro } from "../../style/styled";
-import eletrico from "../../img/eletrico2.svg"
-import { useEffect } from "react";
+import { DivBody, DivLogin } from "../../style/styled";
 import maserattiLogin from "../../img/13902.jpg"
-import AreaUser from "../AreaUsuario/AreaUser";
 import Header from "../ComponentesEstaticos/Header";
 
 

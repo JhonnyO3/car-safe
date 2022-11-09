@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { DivBody, DivRegistro } from "../../style/styled";
-import registro from "../../img/eletrico2.svg"
-import red from "../../img/red.webp"
-import marca from "../../img/marca.jpg"
-import white from "../../img/white.jpg"
 import vermelho from "../../img/vermelh.jpg"
-import AreaUser from "../AreaUsuario/AreaUser";
 import Header from "../ComponentesEstaticos/Header";
 
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { DivControle, DivPlanilha, DivInfoPessoal } from "../../style/styled";
 import MenuLateral from "../ComponentesEstaticos/MenuLateral";
-import {FaEdit, FaTrash, AiFillDelete, FaTrashAlt} from 'react-icons/fa'
+import {FaEdit, FaTrashAlt} from 'react-icons/fa'
 import { Link } from "react-router-dom";
 
 

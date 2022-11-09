@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DivHeader } from "../../style/styled";
-import stellantis from "../../img/Stellantis.svg"
-import logo from "../../img/logo.png"
 import stellantis1 from "../../img/stellantis-255.png"
 import logo1 from "../../img/logo1.png"
 

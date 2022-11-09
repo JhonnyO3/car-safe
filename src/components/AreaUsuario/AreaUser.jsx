@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { DivAreaUsuario, DivInfoPessoal } from "../../style/styled";
+import { DivAreaUsuario } from "../../style/styled";
 import zerati from "../../img/zerati.png"
 
 import MenuLateral from "../ComponentesEstaticos/MenuLateral";
-import { useSearchParams } from "react-router-dom";
 
 
 export default function AreaUser() {

@@ -1,12 +1,6 @@
-import React, { useEffect, useState } from "react";
-import registro from "../../img/registro.svg"
-import red1 from "../../img/red1.jpg"
-import motor from "../../img/motorveneno.jpg"
+import React, {  useState } from "react";
 import mc20  from "../../img/mc20.jpg" 
-
-
-import { DivBody, DivRegistro, DivUser } from "../../style/styled";
-import AreaUser from "../AreaUsuario/AreaUser";
+import { DivBody, DivUser } from "../../style/styled";
 import Header from "../ComponentesEstaticos/Header";
 
 
@@ -41,19 +35,7 @@ export default function Cadastro() {
 
 
 
-    /*const handleSubmit = e => {
-        e.preventDefault()
-        fetch(`http://localhost:8080/SafeCarApp/rest/veiculo/cadastro-veiculo/`, {
-            method: metodo,
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(dadosUser)
 
-    }).then(() => {
-        
-        })
-    }  */
     const [dadosUser, setDadosUser] = useState({
         nmVeiculo: objCarro.nmVeiculo,
         tipo: objCarro.tipo,
