@@ -12,6 +12,21 @@ import { useEffect } from "react";
 
 
 export default function Software() {
+  const usuario = JSON.parse(sessionStorage.getItem("usuario-validado")) 
+    
+    
+
+  useEffect(()=> {
+      if (usuario == null) {
+          alert("Você precisa estar logado para acessar!")
+          window.location = "/usuario/login"
+      }
+
+  }, [])
+
+
+
+
     const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const connect = window.drawConnectors;

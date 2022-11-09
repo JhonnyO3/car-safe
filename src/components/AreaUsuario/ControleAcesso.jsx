@@ -6,6 +6,18 @@ import { Link } from "react-router-dom";
 
 
 export default function ControleAcesso() {
+    const usuario = JSON.parse(sessionStorage.getItem("usuario-validado")) 
+
+    useEffect(()=> {
+        if (usuario == null) {
+            alert("Você precisa estar logado para acessar!")
+            window.location = "/usuario/login"
+        }
+
+    }, [])
+
+
+
     const [usuarios, setUsuarios] = useState([])
 
     useEffect(() => {
@@ -68,8 +80,9 @@ export default function ControleAcesso() {
                                         <td>{usuario.tpSanguineo}</td>
                                         <td>{usuario.login}</td>
                                         <td>{usuario.idade}</td>
-                                        <td><Link to= {`editar-usuario/${usuario.id}`}></Link></td>
-                                        <td><button onClick={handleDelete.bind(this, usuario.id)}><FaTrashAlt className="icone" /></button></td>
+                                        <td className="editar"><Link to= {`/editar-usuario/${usuario.id}`}><FaEdit/></Link>
+                                        <a onClick={handleDelete.bind(this, usuario.id)}><FaTrashAlt className="icone" /></a></td>
+                                       
                                     </tr>
 
                                 ]))}

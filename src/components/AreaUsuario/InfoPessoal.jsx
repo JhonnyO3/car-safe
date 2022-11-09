@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DivInfoPessoal } from "../../style/styled";
 import jeep from "../../img/jeep.png"
 import MenuLateral from "../ComponentesEstaticos/MenuLateral";
+import { useState } from "react";
 
 
 export default function InfoPessoal() {
-    const usuario = JSON.parse(sessionStorage.getItem("usuario-validado")) 
 
-/*
-    const valida = sessionStorage.getItem("usuario-validado")
+    const verificar = sessionStorage.getItem("usuario-validado")
+
     
-
+    const[usuario, setUsuario] = useState([])
+    
+    
+    
     useEffect(()=> {
-        if (valida) {
+        if (verificar == null) {
             alert("Você precisa estar logado para acessar!")
             window.location = "/usuario/login"
+        } else {
+            setUsuario(JSON.parse(sessionStorage.getItem("usuario-validado")) )
+            
         }
-    }, [])*/
+
+    }, [])
     
 
     return(

@@ -4,6 +4,21 @@ import MenuLateral from "../ComponentesEstaticos/MenuLateral";
 
 
 export default function PlanosSaude() {
+
+    const usuario = JSON.parse(sessionStorage.getItem("usuario-validado")) 
+    
+    
+
+    useEffect(()=> {
+        if (usuario == null) {
+            alert("Você precisa estar logado para acessar!")
+            window.location = "/usuario/login"
+        }
+
+    }, [])
+
+
+
     const [planos, setPlano] = useState([])
 
 

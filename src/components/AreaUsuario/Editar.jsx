@@ -2,16 +2,26 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DivBody, DivUser } from "../../style/styled";
 import Header from "../ComponentesEstaticos/Header";
-import mc20  from "../../img/mc20.jpg" 
 import hibrid from "../../img/hibrida.jpg"
 
 
 export default function Editar() {
+
+    const usuario = JSON.parse(sessionStorage.getItem("usuario-validado")) 
     
-    let {id} = useParams()
     
-    const [user, setUser] = useState({
-        id: id,
+
+    useEffect(()=> {
+        if (usuario == null) {
+            alert("Você precisa estar logado para acessar!")
+            window.location = "/usuario/login"
+        }
+
+    }, [])
+
+    let { id } = useParams()
+
+    const [novo, setNovo] = useState({
         nome: "",
         profissao: "",
         raca: "",
@@ -23,48 +33,42 @@ export default function Editar() {
         idade: 0,
         salario: 0,
     })
-    
-    
+    let metodo = "put"
+
+
     const handleChange = e => {
-        setUser({ ...user, [e.target.name]: e.target.value })
-        console.log(user)
+        setNovo({ ...novo, [e.target.name]: e.target.value })
+        console.log(novo)
     }
-  
-    
+
+
     const handleSubmit = e => {
         e.preventDefault()
-        sessionStorage.setItem("usuario", JSON.stringify(user))
         fetch(`http://localhost:8080/SafeCarApp/rest/usuario/${id}`, {
-            method: "put",
+            method: metodo,
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(user)
-        }).then((error)=> {
-            console.log(error)
-            
-        }).then(()=> {
-            window.location = "area-usuario"
+            body: JSON.stringify(novo)
+        }).then(() => {
+            window.location = "/"
         })
 
 
     }
 
-    useEffect(()=>{
-        if(id){
-            fetch(`http://localhost:8080/SafeCarApp/rest/usuario/${id}`)
-            .then((resp)=>{
-                return(resp.json())
-            }).then(data=>{
-                setUser(data)
+    useEffect(() => {
+
+        fetch(`http://localhost:8080/SafeCarApp/rest/usuario/${id}`)
+            .then((resp) => {
+                return (resp.json())
+            }).then(data => {
+                setNovo(data)
+            }).then((error) => {
+                console.log(error)
             })
-        }
-    },[id])
 
-
-
-
-
+    }, [id])
     return (
         <div>
             <Header />

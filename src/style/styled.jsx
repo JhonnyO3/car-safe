@@ -222,7 +222,18 @@ margin-top: 100px;
 margin-bottom: 100px;
 display: flex;
 
-
+.editar   {
+ margin-left: 20px;
+  
+  
+}
+a {
+  margin: 15px;
+  
+}
+.icone:hover{
+  color: #243882;
+}
 
 table{
   padding-left: 27%;

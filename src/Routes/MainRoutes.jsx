@@ -23,7 +23,7 @@ export default function MainRoutes() {
             <Route path="/controle-acesso" element={<ControleAcesso/>} />
             <Route path="/plano-saude" element={<PlanosSaude/>} />
             <Route path="/software" element={<Software/>} />
-            <Route path="/editar-usuario" element={<Editar/>} />
+            <Route path='/editar-usuario/:id' element={<Editar/>} />
 
         </Routes>
     )
