@@ -357,7 +357,7 @@ span{
   height: 100%;
   margin-left: 25%;
   position: absolute;
-  padding-bottom: 50px;
+  padding-bottom: 67vh;
   width: 70%;
 }
 .secao-principal {
@@ -394,12 +394,13 @@ span{
   background-color: #181818;
   padding: 20px;
   
-  height: 67vh;
+  height: 137vh;
 
   p{
     color: white;
     padding: 7px;
-    font-size: 45px;
+    margin-top: 20px;
+    font-size: 25px;
   }
   
 }
@@ -412,10 +413,16 @@ p{
 img{
   display: flex;
   left: 100vh;
-  top: 74vh;
+  top: 124vh;
   width: 49%;
   position: absolute;
   
+}
+
+iframe{
+  margin-left: 10vh;
+  margin-top: 10vh;
+  border-radius: 30px;
 }
 
 
