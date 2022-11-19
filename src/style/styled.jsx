@@ -595,8 +595,73 @@ p{
 
 export const DivProposta = styled.div`
 
+@media screen and (max-width: 1920px) {
+  .text {
+    margin-left: 10vh;
+  }
+}
+
+@media screen and (max-width: 1331px ) {
+  flex-wrap: wrap;
+  
+}
+@media screen and (max-width: 600px ) {
+  width: 600px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+
+  
+  display: flex;
+  img{
+    justify-content: center;
+    max-width: 60vh;
+   
+  }
+
+
+  
+}
+@media screen and (max-width: 410px ) {
+  text-align: center;
+  width: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    display: flex;
+    max-width: 360px;
+ 
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0vh;
+    border: 0px;
+    padding: 0px;
+    align-items: center;
+    text-align: justify;
+
+  }
+  .text h1{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 35px;
+    width:98%;
+    text-align: center;
+  }
+  .text p{
+    max-width: 85%;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-width: 100%;
 background-color: #222222;
 color: white;
 position: static;
@@ -604,20 +669,31 @@ padding-top: 150px;
 font-size: 20px;
 padding-bottom: 150px;
 display: flex;
+flex-direction: row;
 margin-bottom: 90px;
-img{
-  width: 180%;
+
+
+ img{
+  width: 100vh;
+  height: 100%;
   padding-right: 50px;
   padding-top: 10px;
 }
-p{
-  margin-top: 20px;
+.text p{
+  margin-top: 7vh;
   font-size: 30px;
-  width: 85%;
+  width: 75%;
+
 }
 .text{
-  margin-left: 40px;
-  margin-top: 90px;
+  margin-top: 7vh;
+  width: 100%;
+
+}
+.text{
+  p{
+    width: 100%;
+  }
 }
 
 
@@ -849,6 +925,67 @@ export const DivMain = styled.div`
 
 `
 export const DivCards = styled.div`
+
+@media screen and (max-width: 1920px ) {
+  .cards{
+    margin-left: 10vh;
+  }
+
+}
+@media screen and (max-width: 414px) {
+  max-width: 414px;
+  .cards img{
+    width: 100%;
+    height: 40vh;
+ 
+  }
+  
+}
+@media screen and (max-width: 1480px ) {
+  margin-left: 0;
+  .cards {
+    align-items: center;
+    justify-content: center;
+    margin-left: 0vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .cards div{
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1480px;
+    text-align: justify;
+    word-break: break-all;
+  }
+  .cards img{
+    max-width: 90%;
+    border-radius: 0;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    margin-top: 15vh;
+  }
+
+}
+  @media screen and (max-width: 410px ) {
+
+
+    .cards{
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ 
+
+
+  
+}
+
 color: white;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 background-color: #222222;
@@ -857,17 +994,20 @@ font-size: 30px;
 border-radius: 30px;
 box-shadow: 100px, 5px, 5px white;
 padding-bottom: 150px;
+display: flex;
+width: 100%;
+
 
 margin-bottom: 90px;
 img{
-  width: 100%;
-  height: 100%;
+  width: 80vh;
+  height: 50vh;
   padding-right: 200px;
   border-radius: 50%;
   padding-top: 30px;
 }
 .cards {
-  margin-left: 150px;
+  width: 100%;
   display: flex;
 }
 .cards div {
@@ -880,24 +1020,23 @@ p{
 }
 `
 export const DivAbout = styled.div`
-width: 85%;
-margin-left: 120px;
+width: 100%;
 text-align: center;
 font-family: sans-serif;
 color: #8b8b8b;
-justify-content: center;
-margin-top: 65vh;
 margin-bottom: 20vh;
 
-h1{
-  color: #243782;
-  font-size: 40px;
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
+
 p{
   margin-top: 20vh;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
+  width: 80%;
   font-size: 30px;
 }
 
@@ -907,15 +1046,37 @@ p{
 
 
 export const DivBanner = styled.div`
-*{
+
+@media screen and (max-width: 373px ) {
+  max-width: 373px;
+  min-height: 812px;
+  text-align: center;
+
+  .banner{
+    position: relative;
+  }
+  
+  .banner img {
+    width: 373px;
+    height: 100%;
+    top: 10vh;
+    position: relative;
+  }
+
+
+  
 }
+bottom: 0;
+top: 0;
+padding: 0;
+margin: 0;
 width: 100%;
 .banner{
-  width: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     font-size: 40px;
-    height: 300px;
+    min-height: 100%;
     
 
 }
@@ -924,6 +1085,7 @@ img{
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
 }
 .texto{
     position: relative;
@@ -939,11 +1101,172 @@ margin-top: 20vh;
 `
 
 export const DivHeader = styled.header`
+@media screen and (max-width: 1562px) {
+  background-color: #080808;
+  padding: 20px;
+  position: fixed;
+
+  .nav img{
+    max-width: 200px;
+
+
+  }
+  .nav .menuLateral{
+    display: flex;
+    position: fixed;
+    left: 5vh;
+    top: 0;
+    margin-top: 10px;
+    width: 0px;
+    
+
+
+  }
+
+  .logo img{
+    max-width: 200px;
+    display: flex;
+    position: fixed;
+    margin-left: 20vh;
+
+
+  }
+  .nav ul .menu a{
+    display: none;
+  }
+
+}
+
+
+
+/*@media screen and (max-width: 1700px) {
+  max-width: 1700px;
+  padding: 0;
+ 
+.stellantis{
+    width: 100%;
+    left: 80vh;
+  }
+
+
+
+
+  .nav  ul {
+    border: 0;
+    margin: 0;
+    background-color: #070707;
+    padding: 100px;
+    text-align: center;
+    position: static;
+    right: 10vh;
+    justify-content: space-between;
+    font-size: 40px;
+    height: 100%;
+    
+    
+    
+    
+    
+  }
+  .nav .menuLateral{
+    display: inline;
+    position: fixed;
+    left: 20vh;
+    
+    
+    
+    
+  }
+  .menuLateral{
+    position: static;
+  }
+  
+  .nav ul {
+    position: static;
+    left: 100vh;
+    flex-direction: column;
+    align-items: unset;
+    font-size: 40px;
+  }
+  ul{
+    text-align: center;
+
+
+  }
+  .nav ul li a {
+    font-size: 40px;
+  }
+  ul li a .cadastro{
+    border: 0;
+    border-radius: 0;
+    font-size: 40px;
+
+    width: 100%;
+    
+  }
+
+  
+}*/
+/*@media screen and (max-width: 1496px) {
+  max-width: 1496px;
+  img{
+    max-width: 250px;
+  }
+
+  
+}
+@media screen and (max-width: 1364px) {
+  max-width: 1364px;
+  img{
+    max-width: 350px;
+  }
+
+ 
+  li a .menuLateral{
+    display: inline;
+    background-color: red;
+  }
+  .nav ul {
+    flex-direction: column;
+    align-items: unset;
+  }
+  
+}*/
+@media screen and (max-width: 1080px) {
+  .stellantis{
+    display: none;
+  }
+}
+@media screen and (max-width: 1020px) {
+  max-width: 1020px;
+  img{
+    max-width: 250px;
+  }
+
+
+  
+}
+
+
+@media only screen and (max-width: 1000px)  {
+  .logo{
+
+    width: 100%;
+  }
+  .stellantis{
+    position: relative;
+    width: 100%;
+    right: 3vh;
+    
+  }
+
+
+   }
+
    font-family : sans-serif;
-   padding: 1vh;
    padding-bottom: 30px;
    font-size: 1.5rem;
-   background-color: #07070713;
+   background-color: #07070721;
    width: 100%;
    color: #ffffff;
    display: flex;
@@ -965,7 +1288,7 @@ export const DivHeader = styled.header`
       position: relative;
       display: inline;
       margin: 10px 20px 0 15px;
-      button {
+      .cadastro {
       border: #070707;
       position: relative;
       bottom: 5px;
@@ -1012,11 +1335,12 @@ export const DivHeader = styled.header`
       padding-bottom: 2px;
     } 
     img{
+        width: auto;
+        height: auto;
+        max-width: 350px;
         justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        top: 10px;
+        position: absolute;
+        top: 20px;
         
     }
     h1{
@@ -1026,22 +1350,32 @@ export const DivHeader = styled.header`
         margin-left: 5vh;
         
     }
+  
     .logo img{
-      position: relative;
-      top: 12px;
+      top: 20px;
       bottom: 20px;
       left: 30px;
 
     }
-    @media screen and (min-width: 375px){
-      .logo img{
-        width: 300px;
-      }
-      img {
-        width: 300px;
-      }
+    .menuLateral{
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 55px;
+      position: absolute;
+      top: 4vh;
+      left: 215vh;
+      display: none;
       
     }
+
+    .stellantis{
+
+      width: 100%;
+      position: absolute;
+      left: 60vh;
+    }
+
 
 `
 
