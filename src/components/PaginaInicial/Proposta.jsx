@@ -15,7 +15,6 @@ max-width: 410px
 export default function Proposta() {
     return (
         <DivWidth>
-
             <DivProposta>
                 <div className="text">
                     <h1>Proposta de invervenção SafeCar</h1>
