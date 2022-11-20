@@ -598,6 +598,35 @@ export const DivProposta = styled.div`
 @media screen and (max-width: 1920px) {
   .text {
     margin-left: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    padding-right: 50px;
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 1440px) {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  flex-wrap: wrap;
+
+  img {
+    padding-right: 0px;
+    padding-top: 0px;
+    max-width: 70em;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+  .text p {
+    max-width: 75%;
+    text-align: center;
   }
 }
 
@@ -676,11 +705,12 @@ margin-bottom: 90px;
  img{
   width: 100vh;
   height: 100%;
-  padding-right: 50px;
-  padding-top: 10px;
+
+}
+.text h1 {
+  margin-bottom: 20px;
 }
 .text p{
-  margin-top: 7vh;
   font-size: 30px;
   width: 75%;
 
@@ -688,6 +718,7 @@ margin-bottom: 90px;
 .text{
   margin-top: 7vh;
   width: 100%;
+  padding-right: 20px;
 
 }
 .text{
@@ -967,6 +998,8 @@ export const DivCards = styled.div`
     padding: 0;
     align-items: center;
     margin-top: 15vh;
+    border-radius: 25px;
+
   }
 
 }
@@ -1101,6 +1134,14 @@ margin-top: 20vh;
 `
 
 export const DivHeader = styled.header`
+
+.nav .menuLateral:focus ~ ul  {
+  height: 50vh ;
+}
+.nav .menuLateral:focus ~ ul li  {
+  display: inline;
+}
+
 @media screen and (max-width: 1562px) {
   background-color: #080808;
   padding: 20px;
@@ -1112,12 +1153,12 @@ export const DivHeader = styled.header`
 
   }
   .nav .menuLateral{
-    display: flex;
+    display: inline;
     position: fixed;
     left: 5vh;
     top: 0;
     margin-top: 10px;
-    width: 0px;
+    width: 10px;
     
 
 
@@ -1127,60 +1168,40 @@ export const DivHeader = styled.header`
     max-width: 200px;
     display: flex;
     position: fixed;
-    margin-left: 20vh;
+    margin-left: 18vh;
 
 
-  }
-  .nav ul .menu a{
-    display: none;
   }
 
 }
 
 
 
-/*@media screen and (max-width: 1700px) {
-  max-width: 1700px;
+@media screen and (max-width: 1560px) {
   padding: 0;
- 
-.stellantis{
-    width: 100%;
-    left: 80vh;
-  }
+  max-height: 600px;
+  justify-content: center;
+  text-align: center;
 
 
-
-
-  .nav  ul {
-    border: 0;
-    margin: 0;
-    background-color: #070707;
-    padding: 100px;
+  .nav  ul  {
+    display: none;
     text-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    background-color: #070707;
+    text-align: center;
+    margin-top: 10vh;
     position: static;
     right: 10vh;
     justify-content: space-between;
     font-size: 40px;
-    height: 100%;
-    
-    
-    
-    
-    
   }
-  .nav .menuLateral{
-    display: inline;
-    position: fixed;
-    left: 20vh;
+
     
     
-    
-    
-  }
-  .menuLateral{
-    position: static;
-  }
-  
   .nav ul {
     position: static;
     left: 100vh;
@@ -1191,9 +1212,13 @@ export const DivHeader = styled.header`
   ul{
     text-align: center;
 
-
+  }
+  .nav ul li {
+    text-align: center;
+    display: none;
   }
   .nav ul li a {
+    text-align: center;
     font-size: 40px;
   }
   ul li a .cadastro{
@@ -1205,8 +1230,8 @@ export const DivHeader = styled.header`
     
   }
 
-  
-}*/
+
+}
 /*@media screen and (max-width: 1496px) {
   max-width: 1496px;
   img{
@@ -1284,6 +1309,7 @@ export const DivHeader = styled.header`
       display: flex;
       
     }
+  
     ul li {
       position: relative;
       display: inline;
