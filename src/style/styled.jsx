@@ -1136,7 +1136,7 @@ margin-top: 20vh;
 export const DivHeader = styled.header`
 
 .nav .menuLateral:focus ~ ul  {
-  height: 50vh ;
+  height: 60vh ;
 }
 .nav .menuLateral:focus ~ ul li  {
   display: inline;
@@ -1307,10 +1307,13 @@ export const DivHeader = styled.header`
     ul{
 
       display: flex;
+      transition: all .5s;
       
     }
   
     ul li {
+
+
       position: relative;
       display: inline;
       margin: 10px 20px 0 15px;
